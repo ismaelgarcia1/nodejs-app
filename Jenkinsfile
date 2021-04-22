@@ -1,9 +1,10 @@
 pipeline {
     agent any 
     stages {
-        stage('Hello world') {
+        stage('checkout') {
             steps {
-                echo 'Hello world!' 
+                git branch: 'main', url: 'https://github.com/ismaelgarcia1/nodejs-app.git' 
+                echo 'checkout'
             }
         }
     }
