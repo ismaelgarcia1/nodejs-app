@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-               sh 'ls -a'
+                echo "hello ${env.BRANCH_NAME}"
+                sh 'ls -a'
             }
         }
     }
